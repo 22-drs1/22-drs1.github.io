@@ -48,70 +48,14 @@
 
 
 
-    
-        <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        
-            load: ['[tex]/mhchem'],
-        
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        
-            packages: {'[+]': ['mhchem']},
-        
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
           
 
 
     
     
     <title>
-          
-            The World of Dr.S
+        
+            will | The World of Dr.S
         
     </title>
     
@@ -271,11 +215,11 @@
 </aside>
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
     
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
+    
+      <div class="post-header"> 
   <a class="post-header-title" href="/2020/10/25/will/">will</a>
   <div class="post-header-meta">
     <span>
@@ -291,78 +235,162 @@
       In:&nbsp;
     </span>
     
+      <span>
+        <span class="iconfont icon-eye"></span>
+        Views:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
   </div>
 </div>   
     
 
 
 
-      
-      
-  <div class="tag-line-space"></div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p>Obesity is a huge public health problem facing the whole world today</p>
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=will&url=http://example.com/2020/10/25/will/&pic=http://example.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=will&url=http://example.com/2020/10/25/will/&via=Dr.S" target="_blank" class="mdui-ripple">Share to Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2020/10/25/will/" target="_blank" class="mdui-ripple">Share to Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=http://example.com/2020/10/25/will/" target="_blank" class="mdui-ripple">Share to Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com/2020/10/25/will/&title=will" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=The World of Dr.S&title=will&summary=&pics=http://example.com/null&url=http://example.com/2020/10/25/will/" target="_blank" class="mdui-ripple">Share to QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=http://example.com/2020/10/25/will/&text=will" target="_blank" class="mdui-ripple">Share to Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <p>Obesity is a huge public health problem facing the whole world today</p>
 <p>Health problems are also an important risk factor for asthma in children and adults</p>
 <p>And disease regulatory factors. Obese people have a significantly increased risk of developing asthma</p>
-<p>A study says there...
-          
-        </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/10/25/will/">Read More</a>
-        </div>
-      </div>
-    </article>
+<p>A study says there are 250,000 new cases of asthma each year in the United States</p>
+<p>Cases may be related to obesity, and usually such patients have more clinical symptoms</p>
+<p>Severe, more frequent seizures, more significant quality of life decline, and treatment</p>
+<p>The response of therapeutic drugs is worse [1]. However, the biological machine behind it</p>
+<p>The system is not fully understood, but asthma itself and obesity-related asthma</p>
+<p>Phenotypic heterogeneity adds complexity and complexity to various research findings</p>
+<p>Consistency.</p>
+<p>It is now known that diets that lead to obesity tend to be saturated fat</p>
+<p>High in fat, low in fiber and antioxidants, and fructose, etc</p>
+<p>It’s high in sugar. A diet high in saturated fat promotes neutrality</p>
+<p>Granulocyte airway inflammation and reduced bronchodilator response</p>
+<p>[2]. Giving a diet high in antioxidants can improve lung function and asthma</p>
+<p>Frequency of asthma [3]. Animal models have found that a high-fructose diet can lead to</p>
+<p>Endocrine dysfunction and increased airway hyperreactivity [4]. Food acquisition</p>
+<p>Habitus can further affect the gut microbiota. Low in fiber and high in fat</p>
+<p>Diet can result in a significant reduction in the number of Bacteroidetes in the gut, such as</p>
+<p>Bacteria play an important role in the production of short-chain fatty acids (SCFA)</p>
+<p>To use. The decrease of SCFA propionate level in circulation may be accompanied by metamorphosis</p>
+<p>Acute airway inflammation was aggravated. The increase of SCFA propionate level was</p>
+<p>It reduces the ability of dendritic cells to promote TH2 response, thereby decreasing</p>
+<p>Hyperallergenic inflammation [5].</p>
+<p>In terms of the immune system and inflammatory factors, obesity makes CD4</p>
+<p>fine</p>
 
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2020/10/25/immune/">消化系统的功能</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      Posted on:&nbsp;2020-10-25
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-10-25
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      In:&nbsp;
-    </span>
-    
   </div>
-</div>   
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
     
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/10/25/immune/">
+        <span>消化系统的功能</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
 
 
 
-      
-      
-  <div class="tag-line-space"></div>
 
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p>消化系统由消化道和消化腺组成，受神经和体液因素的影响。消化腺的分泌包括内分泌和外分泌，前者分泌的激素通过局部或者血液循环到全身，调节消化系统的活动，后者分泌消化液到胃肠腔内，参与食物的化学性消化。消化道的活动受神经和体液调节，消化道除接受交感和副交感神经支配外，自身有一套肠神经系统（enteric nervous system，ENS），精细地调节消化道的功能。</p>
-<h1 id="一、消化道平滑肌的特性"><a href="#一、消化道平滑肌的特性" class="headerlink" title="一、消化道平滑肌的特性"></a>一、消化道平滑肌的特性</h1><p>在...
-          
-        </div>
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/2020/10/25/will/" id="toc-header" class="mdui-ripple">Table of Contents</a>
         
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/10/25/immune/">Read More</a>
-        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
+        
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+        
       </div>
-    </article>
-
-
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
+</div>
+        </div>
+      
+    </div>
 
   </main>
   <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
@@ -410,6 +438,12 @@
 
 
 
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
 
 
 
